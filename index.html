@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article>
+          <div>
+            <div class="separador">
+              <a class="autor" href="#">{{ post.autor }}</a>
+              <small class="data">{{ post.data }}</small>
+            </div>
+            <h2><a class="titulo-pub" href="#">{{ post.titulo }}</a></h2>
+            <p class="publicacao">{{ post.publicacao }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
